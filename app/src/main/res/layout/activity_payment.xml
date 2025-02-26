@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/payment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/homeIB"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/home" />
+
+    <ImageButton
+        android:id="@+id/profileIB"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cartIB"
+        app:srcCompat="@drawable/profile" />
+
+    <ImageButton
+        android:id="@+id/cartIB"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/homeIB"
+        app:srcCompat="@drawable/cart" />
+
+    <TextView
+        android:id="@+id/paymentTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Payment"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/productTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="Product Name:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arrowIB" />
+
+    <TextView
+        android:id="@+id/serviceTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Service Charge:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productTV" />
+
+    <TextView
+        android:id="@+id/payoptionTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Payment Option:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/serviceTV" />
+
+    <TextView
+        android:id="@+id/deliveryTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Delivery Address:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/payoptionTV" />
+
+    <Button
+        android:id="@+id/buyBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="100dp"
+        android:textColor="@android:color/black"
+        android:backgroundTint="#A1DE8A"
+        android:text="Buy One-time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deliveryTV" />
+
+    <Button
+        android:id="@+id/subscribeBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="Set Subscription"
+        android:textColor="@android:color/black"
+        android:backgroundTint="#A1DE8A"
+        app:layout_constraintBottom_toBottomOf="@+id/buyBTN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buyBTN"
+        app:layout_constraintTop_toTopOf="@+id/buyBTN" />
+
+    <ImageButton
+        android:id="@+id/arrowIB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow" />
+
+    <TextView
+        android:id="@+id/productNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="product 1"
+        app:layout_constraintBottom_toBottomOf="@+id/productTV"
+        app:layout_constraintStart_toEndOf="@+id/productTV"
+        app:layout_constraintTop_toTopOf="@+id/productTV" />
+
+    <TextView
+        android:id="@+id/schargeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$5.49"
+        app:layout_constraintStart_toStartOf="@+id/productNameTV"
+        app:layout_constraintTop_toTopOf="@+id/serviceTV" />
+
+    <Spinner
+        android:id="@+id/paySV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/spinner_items"
+        app:layout_constraintStart_toStartOf="@+id/schargeTV"
+        app:layout_constraintTop_toTopOf="@+id/payoptionTV" />
+
+    <TextView
+        android:id="@+id/deliveryaddTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="address sample"
+        app:layout_constraintStart_toStartOf="@+id/paySV"
+        app:layout_constraintTop_toTopOf="@+id/deliveryTV" />
+</androidx.constraintlayout.widget.ConstraintLayout>

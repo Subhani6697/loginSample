@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LoginSample</string>
+    <string-array name="spinner_items">
+        <item>Cash</item>
+        <item>Wallet</item>
+    </string-array>
+</resources>
